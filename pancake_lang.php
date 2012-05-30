@@ -209,6 +209,7 @@ $lang = array(
 
 	/** Invoices **/
 	'invoices:markassent' => 'Als Versendet markieren',
+	'invoices:invoicedate' => 'Rechnungsdatum',
 	'invoices:sentbutunpaid' => 'Rechnung, an den Kunden versendet aber immer noch nicht bezahlt',
 	'invoices:duplicated' => 'Duplizierte Rechnung #:1. Die neue rechnungsnummer ist #:2.',
 	'invoices:all'		=>	'Alle Rechnungn',
@@ -311,6 +312,7 @@ $lang = array(
 
 	/** Projects **/
 	'projects:navigationitem' => 'Projekte',
+	'projects:hours_worked' => 'Anzahl gearbeitete Stunden',
 	'projects:alltitle' =>	'Alle Projekte',
 	'projects:noprojecttitle' => 'Noch keine Projekte im Moment!',
 	'projects:noprojecttext' => 'Möchten Sie jetzt eines hinzufügen? ',
@@ -323,6 +325,7 @@ $lang = array(
 	'projects:is_completed' => 'Fertig gestellt',
 	'projects:areyousuredeletetask' => 'Möchten Sie diese Aufgabe wirklich löschen?',
 	'projects:add_time' => 'Neue Zeit',
+		'projects:add_hours' => 'Stunden hinzufügen',
 	'projects:generate_invoice' => 'Rechnung erstellen',
 	'projects:no_projects' => 'Keine Projekte.',
 	/** End Projects **/
@@ -338,7 +341,9 @@ $lang = array(
 	'milestones:select_default' => '-- kein Meilenstein --',
 	'milestones:no_milestone' => 'Aufgabe ohne Meilenstein',
 	'milestones:add_success' => 'Meilenstein ":1" hinzugefügt!',
+	'milestones:edit_success' => 'Meilenstein ":1" erfolgreich bearbeitet!',
 	'milestones:add_failed' => 'Meilenstein ":1" konnte nicht hinzugefügt werden.',
+	'milestones:edit_failed' => 'Meilenstein ":1" konnte nicht bearbeitet werden.',
 	'milestones:are_you_sure_delete' => 'Sind Sie sich, dass Sie diesen Meilenstein löschen wollen?',
 	'milestones:delete_success' => 'Meilenstein ":1" gelöscht!',
 	'milestones:does_not_exist' => 'Dieser Meilenstein existiert nicht.',
@@ -367,7 +372,6 @@ $lang = array(
 	'currencies:default' => '[Standard] :1',
 	'currencies:cad' => 'Canadian Dollar',
 	'currencies:eur' => 'Euro',
-	'currencies:chf' => 'Sfr ',
 	'currencies:usd' => 'U.S. Dollar',
 	'currencies:gbp' => 'Pound Sterling',
 	'currencies:hkd' => 'Hong Kong Dollar',
@@ -435,6 +439,7 @@ $lang = array(
 	'tasks:rate' => 'Ansatz',
 	'tasks:default_rate' => 'Standard-Ansatz',
 	'tasks:view_entries' => 'Einträge ansehen',
+		'tasks:edit_entry' => 'Zeiteintrag bearbeiten',
 	'tasks:create' => "Neue Aufgabe",
 	'tasks:edit' => "Aufgabe bearbeiten",
 	'tasks:create_succeeded' => "Die Aufgabe wurde erstellt!",
@@ -466,6 +471,7 @@ $lang = array(
 	'transactions:paymentcancelled' => 'Zahlung abgebrochen',
 	'transactions:extrapaymentcancelled' => 'Ihre Zahlung wurde abgebrochen.',
 	'transactions:paymentreceived' => 'Zahlung erhalten',
+	'transactions:fee_applied' => 'Wie bei :1 angegeben, wird eine Transaktionsgebühr erhoben. Der Aufschlag ist :2%.',
 	'transactions:orderbeingprocessed' => 'Bitte warten,, Ihre Zahlung wird verarbeitet und Sie werden weitergeleitet zur Website :1.',
 	'transactions:ifyouarenotredirected' => 'Falls Sie nicht automatisch innerhalb von 5 Sekunden an :1 weitergleitet werden ...',
 	'transactions:thankyouforyourpayment' => 'Danke für Ihre Zahlung. Sie sollten eine Quittung in Kürze erhalten.',
@@ -491,25 +497,32 @@ $lang = array(
 	'frontend:hithere' => 'Hallo!',
 	'frontend:followthemaillinkdude' => 'Um die Rechnung anzuschauen, klicken Sie bitte den ganzen Link, den Sie im Email erhalten haben, an. z.B. :1.',
 	'frontend:contactadminforassistance' => 'Bitte gehen Sie so vor oder wenden Sie sich für Hilfe an :1 @ :2',
-
 	/** End Frontend **/
 
-
-
 	/** Settings **/
+		'settings:default_invoice_notes' => 'Standard Rechnungsanmerkungen',
+    'settings:default_invoice_title' => 'Standard Rechnungstitel',
+        'settings:testemailsettings' => 'Test Email Settings',
 	'settings:kitchen_route' => 'Kundenzone Prefix',
 	'settings:kitchen_route_explain' => "(zB. :1)",
 	'settings:include_remittance_slip' => 'Überweisungsbeleg',
 	'settings:include_remittance_slip_explain' => "Falls angekreuzt, enthalten die PDFs einen Überweisungbeleg.",
+		'settings:items_per_page' => 'Teile pro Seite',
+        'settings:items_per_page_explain' => 'Anzahl der angezeigten Teile pro Seite (Rechnungen/Kostenschätzungen/Angebote/Projekte/Aufgaben).',
 	'settings:send_x_days_before' => 'Standard "Versenden bevor"',
 	'settings:send_x_days_before_explain' => "Standard Anzahl Tage bevor die wiederkehrende Rechnung fällig ist, wird die Rechnung verschickt.",
 	'settings:file_to_import' => 'Datei zu importieren',
+		'settings:export_types' => 'Pancake exportiert alles im JSON Format.',
 	'settings:file_should_be_csv' => 'Nur CSV und XML Dateien sind unterstützt.',
-	'settings:importnow' => 'Jetzt Inportieren!',
+	'settings:importnow' => 'Jetzt Importieren!',
 	'settings:whatimporting' => 'Was importieren Sie?',
 	'settings:whatexporting' => 'Was exportieren Sie?',
 	'settings:nouploadedimportfile' => 'Sie haben keine Datei zum importieren hochgeladen.',
 	'settings:import' => 'Import',
+		'settings:importedclients' => ':1 Kunden importiert.',
+        'settings:importedinvoices' => ':1 Rechungen importiert.',
+        'settings:xwereduplicates' => ':1 waren Duplikate und wurden ignoriert',
+        'settings:import_desc' => 'Import data into Pancake.',
 	'settings:export' => 'Export',
 	'settings:exportnow' => 'Jetzt exportieren!',
 	'settings:importexport' => 'Import / Export',
@@ -552,6 +565,9 @@ $lang = array(
 	'settings:task_time_interval' => 'Aufgaben Zeitintervall',
 	'settings:mailing_address' => 'Mailing Adresse',
 	
+		'settings:default_subject' => 'Standard Betreff',
+        'settings:default_contents' => 'Standard Mitteilung',
+		'settings:new_estimate' => 'Neue Schätzung',
 	'settings:new_invoice' => 'Neue Rechnung',
 	'settings:new_proposal' => 'Neues Angbot',
 	'settings:paid_notification' => 'Zahlungsbenachrichtigung',
@@ -612,7 +628,12 @@ $lang = array(
 
 	/** Partial Payments **/
 	'partial:partialpayments' => 'Zahlungsplan', 
+		'partial:totalamounttobepaid' => "Vom Kunden zu zahlenden Totalbetrag",
+        'partial:amountlefttobeadded' => "Übriger Betrag, welcher noch dem Zahlungspaln anzufügen ist",
+        'partial:amounttoobig' => "Betrag, welcher vom Zahlungsplan zu entfernen ist",
+        'partial:noamountneeded' => "Ihr Zahlungsplan ist vollständig",
 	'partial:amount'          => 'Betrag',
+		'partial:add_payment' => 'Zahlung hinzufügen',
 	'partial:dueon'           => 'Fällig am',
 	'partial:addanother'      => 'Dieser Zahlung einen weiteren Teil anfügen',
 	'partial:disabledforrecurring' => 'Keine Teilzahlung bei fortlaufenden Zahlungen',
@@ -640,6 +661,7 @@ $lang = array(
 	'paypal:email'     => 'PayPal Email',
 	'paypalpro:paypalpro' => 'PayPal Payments Pro',
 	'cash:cash' => 'Bar',
+		'paypalpro:viacreditcard' => 'Mit Kreditkarte bezahlen',
 	'check:check' => 'Scheck',
 	'moneyorder:moneyorder' => 'Geldanweisung',
 	'creditcard:creditcard' => 'Kreditkarte',
@@ -667,10 +689,12 @@ $lang = array(
 	/** End Payment Gateways **/
 	
 	/** Kitchen Area **/
+		'kitchen:edit_comment' => 'Kommentar bearbeiten',
 	'kitchen:kitchen_name'	=>	'Kundenzone',
 	'kitchen:pleaselogin'	=>	'Um zu Ihrem Benutzerkonto zu gelangen, geben Sie bitte Ihre Pass Phrase ein.',
 	'kitchen:nocomments'	=>	'Keine Kommentare vorhanden.',
 	'kitchen:comment'	=>	'Kommentar',
+	'kitchen:comments'	=>	'Kommentare',
 	'kitchen:file'	=>	'Datei',
 	'kitchen:submitcomment'	=>	'Neuer Kommentar',
 	'kitchen:attachment'	=>	'Anhang',
