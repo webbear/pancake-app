@@ -21,11 +21,14 @@ $lang = array(
  	'global:error' => 'Fehler',
 	'global:pancakeby7am' => 'Pancake :1 by :2',
 	'global:allrelatedmediacopyright' => 'Pancake and all related media is Copyright :1 :2',
-	'global:insecure_action' => 'Unsicher Aktion versucht, jedoch abgefangen',
+	'global:insecure_action' => 'Unsichere Aktion versucht, jedoch abgefangen',
 	'global:disabled_in_demo' => 'Some features on this page are disabled for the demo.',
 	'global:estimates' => 'Kostenvoranschläge',
 	'global:estimate' => 'Kostenvoranschlag',
+    'global:incomplete_tasks'		=> 'Unerledigte Aufgaben',
+    'global:completed_tasks'		=> 'Erledigte Aufgaben',
 	'global:projects' => 'Projekte',
+	'global:tickets'	=> 'Tickets',
 	'global:project' => 'Projekt',
 	'global:upload_failed' => 'Beim Hochladen der Datei gab es ein Problem. Bitte versuchen Sie es noch einmal. Sollte das Problem weiter bestehen, wenden Sie sich bitte support@pancakeapp.com.',
 	'global:upload_not_allowed' => 'Der Dateityp, den Sie hochladen wollte, ist nicht erlaubt. Wenn Sie einen solchen Dateityp hochladen müssen, komprimieren Sie ihn zu einem .zip oder einem ähnlichen Archivierungsformat.',
@@ -33,6 +36,7 @@ $lang = array(
 	'global:sentbutunpaid' => 'Ausstehend (Verschickt aber nicht bezahlt)',
 	'global:task' => 'Aufgabe',
 	'global:clients' => 'Kunden',
+	'global:access_denied' => "Kein Zugang",
 	'global:users' => 'Benutzer',
 	'global:send_to_client'	=>	'An den Kunden versendet',
 	'global:couldnotsendemail' => 'Die Email konnte nicht verschickt werden, bitte überprüfen Sie die Einstellungen.',
@@ -47,7 +51,7 @@ $lang = array(
 	'global:Y' => 'J',
 	'global:N' => 'N',
 	'global:notes' => 'Notizen',
-	'global:description' => 'Beschreibung', 
+	'global:description' => 'Beschreibung',
 	'global:backtoadmin' => 'Zurück zum Admin-Bereich',
 	'global:type' => 'Typ',
 	'global:name'		=>	'Name',
@@ -62,6 +66,8 @@ $lang = array(
 	'global:week' => 'Wöchentlich',
 	'global:quarterly' => 'Vierteljährlich',
 	'global:month' => 'Monatlich',
+    'global:every_six_months'		=> 'Alle 6 Monate',
+    'global:biyearly'				=> 'Alle 2 Jahre',
 	'global:year' => 'Jährlich',
 	'global:fax'		=>	'Fax',
 	'global:mobile'		=>	'Mobile',
@@ -71,6 +77,8 @@ $lang = array(
 	'global:action'		=>	'Aktivität',
 	'global:items'		=>	'Posten',
 	'global:reusableinvoiceitems' => 'Wiederverwendbare Rechnungsposten',
+	'global:reusableinvoiceitems_description'	=> 'You should use Reusable Invoice Items when you want to reuse the same item in different invoices. To use them when you\'re creating or editing an invoice, simply start typing the name of the item you saved, and it\'ll offer to autocomplete the item\'s details for you.',
+	'global:create_invoice_estimate'	=>	'Create invoices and estimates to collect money.',
 	'global:createinvoice' 	=> 'Neue Rechnung',
 	'global:paid' 			=> 'Bezahlt',
 	'global:unpaid'			=> 'Unbezahlt',
@@ -78,9 +86,12 @@ $lang = array(
 	'global:time_entries' => 'Zeit Einträge',
 	'global:invoices'		=> 'Rechnungen',
 	'global:invoice'		=>	'Rechnung',
+		 'global:tasks' => 'Aufgaben',
 	'global:estimate' 		=> 'Voranschlag',
 	'global:dashboard'		=> 'Dashboard',
 	'global:settings'		=> 'Einstellungen',
+	'global:plugins'				=> 'Plug-Ins',
+	'global:installed'				=> 'Installiert',
 	'global:changepassword' => 'Passwort ändern',
 	'global:logout' 		=> 'Abmelden',
 	'global:status' => 'Status',
@@ -114,6 +125,9 @@ $lang = array(
 	'global:dragtoreorder' => 'Ziehen zum erneuten Ordnen',
 	'global:start' => 'Start',
 	'global:stop' => 'Stop',
+    'global:start_timer'			=> 'Timer starten',
+    'estimates:create' => "Schätzung erstellen",
+	'global:stop_timer'			=> 'Timer stoppen',
 	'global:created'	=>	'Erstellt',
 	'global:updated'	=>	'Aktualisiert',
 	'global:update'	=>	'Aktualisieren',
@@ -132,8 +146,16 @@ $lang = array(
 	'global:duplicate' => 'Duplizieren',
 	'global:urltosend'	=>	'Hier die zu versendende URL:',
 	'global:copytoclipboard'	=>	'In die Zwischenablage kopieren',
-	
-	
+    'global:if_you_dont_know_how_to_set_it_up'		=> 'If you don\'t know how to set it up, <a href="http://help.pancakeapp.com/customer/portal/articles/605703">click here</a>.',
+	'global:quick_links'			=> 'Quick Links',
+	'global:view_all'				=> 'Alles ansehen',
+	'global:deleted'				=>	'Gelöscht',
+	'global:files' => 'Dateien',
+	'global:upload_files' => ' Dateien hochladen',
+	'global:add_more'	=> 'hinzufügen',
+	'global:select'	=>	'Bitte auswählen',
+
+
 	'global:optional_increment' => '<strong>Optional</strong> -erhöht sich automatisch',
 
 	'login:ahoy' => 'Hallo!',
@@ -144,9 +166,23 @@ $lang = array(
 
 	/** Greetings **/
 	'global:greetings'	=>	array('Hallo!', 'Hallo,', 'Hey,', 'Hi,'),
+    'global:mark_as_accepted' => 'Als akzeptiert markieren',
+    'global:mark_as_rejected' => 'Als abgelehnt markieren',
+
+    'global:reject_estimate' => 'Voranschlag ablehnen',
+    'global:accept_estimate' => 'Voranschlag annehmen',
+    'global:estimate_rejected' => 'Voranschlag abgelehnt',
+    "global:estimate_accepted" => "Voranschlag angenommen",
+    'global:reject_proposal' => 'Vorschlag ablehnen',
+    'global:accept_proposal' => 'Vorschlag anhemen',
+    'global:proposal_rejected' => 'Vorschlag abgelehnt',
+    "global:proposal_accepted" => "Vorschlag angenommen",
+
+    "global:client_area" => "Kunden Area",
+    "global:admin" => "Admin",
 	/** End Greetings **/
 
-	/** Dashboard **/	
+	/** Dashboard **/
 	'dashboard:collected'		=>	'Eingegange',
 	'dashboard:outstanding'		=>	'Ausstehend',
 	'dashboard:latest_activity'	=>	'Letzte Aktivitäten',
@@ -179,14 +215,14 @@ $lang = array(
 	'clients:add'		=>	'hinzufügen',
 	'clients:edit'		=>	'bearbeiten',
 	'clients:noclienttitle' => 'Sie müssen ein paar Kunden angeben!',
-	'clients:noclientbody'	=> 	'So, jetzt können Sie Rechnungen verschicken. Wollen Sie jetzt eine hinzufügen?',	
+	'clients:noclientbody'	=> 	'So, jetzt können Sie Rechnungen verschicken. Wollen Sie jetzt eine hinzufügen?',
 	'clients:hasnoinvoicetitle' =>	'Prima, dieser Kunde ist ferig eingerichtet!',
 	'clients:hasnoinvoicebody'	=> 	'So, jetzt erstellen wir eine Rechnung! Jetzt eine hinzufügen?',
 	'clients:added' => 'Der Kunde wurde hinzugefügt!',
 	'clients:edited' => 'Die Kundendaten wurde aktualisiert!',
 	'clients:deleted' => 'Der Kunde wurde gelöscht!',
 	'clients:does_not_exist' => 'Dieser Kunde existiert nicht!',
-	'clients:health_check'	=> 	'Health Check',	
+	'clients:health_check'	=> 	'Health Check',
 	'clients:all' => 'All',
 	'clients:delete_title'	=>	'Diesen Kunde löschen?!?!',
 	'clients:delete_message'	=>	'Wollen Sie diesen Kunden löschen?<br />Dies löscht alles Rechnungen, Projekte, und Vorschläge für diesen Kunden.',
@@ -194,8 +230,8 @@ $lang = array(
 	'clients:passphrase'		=> 'Pass Phrase',
 	'clients:bad_passphrase'	=> 'Pass Phrase ist falsch.',
 	/** End Clients **/
-	
-	
+
+
 	/** Contact Log **/
 	'contact:title'			=>	'Neuste Kontakt History',
 	'contact:method'		=>	'Kontakt Methode',
@@ -215,7 +251,7 @@ $lang = array(
 	'invoices:all'		=>	'Alle Rechnungn',
 	'invoices:empty'	=>	'Noch keine Rechnungen.',
 	'invoices:overdue'	=>	'Überfällige Rechnungen',
-	'invoices:paid'		=>	'Bezahlte Rechnungen', 
+	'invoices:paid'		=>	'Bezahlte Rechnungen',
 	'invoices:recurringinvoices' => 'Wiederkehrende Rechnungen',
 	'invoices:unsentinvoices' => 'Nicht versandte Rechnungen',
 	'invoices:unpaid'	=>	'Unbezahlte Rechnungen',
@@ -278,6 +314,10 @@ $lang = array(
 	'invoices:editinvoice'	=>	'Rechnung :1 bearbeiten',
 	'invoices:messageupdated'	=>	'Die Rechnung wurde aktualisiert!',
 	'invoices:resend'	=>	'Rechnung wieder versenden',
+	'invoices:files' => 'Dateien',
+	'invoices:file_name'	=>	'Dateiname',
+	'invoices:date_created' => 'Erstellungsdatum',
+	'invoices:size' => 'Grösse',
 	/** End Invoices **/
 
 	/** Estimates **/
@@ -301,13 +341,14 @@ $lang = array(
 	'estimates:added'	=>	'Der Voranschlag wurde hinzugefügt.',
 	'estimates:addedconf'	=>	'Sie haben Voranschlag Nr. <strong>:1</strong>, von Total <strong>:2</strong> hinzugefügt für :3:4.',
 	'estimates:send_now_title' => 'Send estimate now?',
-	'estimates:send_now_body' => 'F¨llen das untenstehnde Formular aus und der Voranschlage wird für Sie versendet.',
+	'estimates:send_now_body' => 'Füllen das untenstehnde Formular aus und der Voranschlage wird für Sie versendet.',
 	'estimates:send_now'	=>	'Voranschlag senden',
 	'estimates:edit'	=>	'Voranschlag bearbeiten',
 	'estimates:preview'	=>	'Ansicht Voranschlag',
 	'estimates:editestimate'	=>	'Voranschlag Nr.:1 bearbeiten',
 	'estimates:messageupdated'	=>	'Der Voranschlag wurde aktualisiert!',
 	'estimates:resend'	=>	'Voranschlag wieder senden',
+    'estimates:estimatedate'			=> 'Datum Voranschlag',
 	/** End Estimates **/
 
 	/** Projects **/
@@ -319,7 +360,7 @@ $lang = array(
 	'projects:add'	=> 'Projekt erstellen',
 	'projects:doesnotexist' => 'Das Projekt existiert nicht.',
 	'projects:edit'	=> 'Projekt bearbeiten',
-	'projects:delete'	=> 'Projekt löschen',	
+	'projects:delete'	=> 'Projekt löschen',
 	'projects:project' => 'Projekt',
 	'projects:due_date' => 'Fälligkeitsdatum',
 	'projects:is_completed' => 'Fertig gestellt',
@@ -334,7 +375,7 @@ $lang = array(
 	/** Milestones **/
 	'milestones:add'	=> 'Neuer Meilenstein',
 	'milestones:edit'	=> 'Meilenstein bearbeiten',
-	'milestones:delete'	=> 'Meilenstein löschen',	
+	'milestones:delete'	=> 'Meilenstein löschen',
 	'milestones:milestone' => 'Meilenstein',
 	'milestones:target_date' => 'Zieldatum',
 	'milestones:assigned_user' => 'Zugewiesener Benutzer',
@@ -447,10 +488,10 @@ $lang = array(
 	'tasks:no_task_message' => 'Sie sollten welche erstellen!',
 	'tasks:is_viewable' => 'In Kundenbereich anzeigen?',
 	'tasks:no_milestones' => 'Aufgabe ohne Meilensteine',
-	
+
 	/** Users **/
 	'users:create_user' => 'Neuer Benutzer',
-	
+
 	/** Items **/
 	'items:name' => 'Posten Name',
 	'items:description' => 'Posten Beschreibung',
@@ -466,6 +507,32 @@ $lang = array(
 	'items:noitembody'	=>	'Sie sollten einige Posten erstellen, dies macht die Rechnungsstellung einfacher!',
 	'items:delete_title'	=>	'Diesem Posten lösche?',
 	'items:delete_message'	=>	'Wollen Sie Posten ":1" wirklich löschen?',
+	'items:select_standard'				=> 'Standard',
+	'items:select_expense'				=> 'Uasgaben',
+	'items:add_expense_to_project'		=> 'Ausgabe hinzufügen',
+	'items:expenses'					=> 'Ausgaben',
+	'items:type' 	 => 	 'Typ',
+	/** Expenses **/
+	'expenses:expenses'					=>	'Ausgaben',
+	'expenses:add'						=>	'Ausgaben hinzufügen',
+	'expenses:edit_expense'				=>	'Ausgaben bearbeiten',
+	'expenses:delete'					=>	'Ausgaben löschen',
+	'expenses:deleted'					=>	'Ausgabe gelöscht',
+	'expenses:all'						=>	'All Expenses',
+	'expenses:amount'					=>	'Menge',
+	'expenses:supplier'					=>	'Supplier',
+	'expenses:suppliers'				=>	'Suppliers',
+	'expenses:category'					=>	'Kategorie',
+	'expenses:categories'				=>	'Kategorien',
+	'expenses:add_supplier'				=>	'Add Supplier',
+	'expenses:edit_supplier'			=>	'Edit Supplier',
+	'expenses:add_category'				=>	'Add Category',
+	'expenses:edit_category'			=>	'Edit Category',
+	'expenses:parent_category'			=>	'Parent Category',
+	'expenses:filter'					=>	'Filter Expenses',
+	'expenses:start_date'				=>	'Start Date',
+	'expenses:end_date'					=>	'End Date',
+
 
 	/** Transactions **/
 	'transactions:paymentcancelled' => 'Zahlung abgebrochen',
@@ -552,7 +619,7 @@ $lang = array(
 	'settings:payment_methods' => 'Zahlungen',
 	'settings:feeds' => 'Feeds',
 	'settings:api_keys' => 'API Schlüssel',
-	
+
 	'settings:site_name' => 'Site Name',
 	'settings:language' => 'Sprache',
 	'settings:timezone' => 'Zeitzone',
@@ -564,7 +631,7 @@ $lang = array(
 	'settings:date_format' => 'Datumsformat',
 	'settings:task_time_interval' => 'Aufgaben Zeitintervall',
 	'settings:mailing_address' => 'Mailing Adresse',
-	
+
 		'settings:default_subject' => 'Standard Betreff',
         'settings:default_contents' => 'Standard Mitteilung',
 		'settings:new_estimate' => 'Neue Schätzung',
@@ -572,11 +639,11 @@ $lang = array(
 	'settings:new_proposal' => 'Neues Angbot',
 	'settings:paid_notification' => 'Zahlungsbenachrichtigung',
 	'settings:payment_receipt' => 'Zahlungsquittung',
-	
+
 	'settings:logo' => 'Ihr Logo',
 	'settings:frontend_css' => 'Frontend Custom CSS',
 	'settings:backend_css' => 'Backend Custom CSS',
-	
+
 	'settings:rss_password' => 'RSS Passwort',
 	'settings:default_feeds' => 'Standard Feeds',
 	'settings:cron_job_feed' => 'Cron Job',
@@ -586,17 +653,17 @@ $lang = array(
 	'settings:automaticallybccclientemail' => 'Automatisches senden einer Kopie von allen Kunden-Emails an die Benachrichtigungsemal (oben bestimmt)',
 	'settings:api_note' => 'Name / Bemerkung',
 	'settings:api_key' => 'Schlüssel',
-	
+
 	'settings:tax_name' => 'Steuer NAme',
 	'settings:tax_value' => 'Wert',
 	'settings:tax_reg' => 'Registration / Code',
 	'settings:add_tax' => 'Weitere Steuer hinzufügen',
-	
+
 	'settings:currency_name' => 'Währungsname',
 	'settings:currency_code' => 'Währungs-Code',
 	'settings:exchange_rate' => 'Wechselkurs',
 	'settings:add_currency' => 'Weitere Währung hinzufügen',
-	/** End Settings **/	
+	/** End Settings **/
 
 	'update:ifyourenotsurecontactus' => "Falls Sie nicht sicher sind, was zu machen ist, eröffnen Sie im <a href='http://pancakeapp.com/forums/newtopic/2/'>Forum ein neues Topic</a>.",
 	'update:youmodified' => 'Sie haben modifiziert',
@@ -627,7 +694,7 @@ $lang = array(
 	/** End Action Logger **/
 
 	/** Partial Payments **/
-	'partial:partialpayments' => 'Zahlungsplan', 
+	'partial:partialpayments' => 'Zahlungsplan',
 		'partial:totalamounttobepaid' => "Vom Kunden zu zahlenden Totalbetrag",
         'partial:amountlefttobeadded' => "Übriger Betrag, welcher noch dem Zahlungspaln anzufügen ist",
         'partial:amounttoobig' => "Betrag, welcher vom Zahlungsplan zu entfernen ist",
@@ -687,7 +754,7 @@ $lang = array(
 	'gateways:api_password' => 'API Passwort',
 	'gateways:api_username' => 'API Benutzername',
 	/** End Payment Gateways **/
-	
+
 	/** Kitchen Area **/
 		'kitchen:edit_comment' => 'Kommentar bearbeiten',
 	'kitchen:kitchen_name'	=>	'Kundenzone',
@@ -711,7 +778,7 @@ $lang = array(
 	'kitchen:passphraseset'	=>	'Dieser Kunde hat eine festgelegte Pass Phrase',
 	'kitchen:passphrase'	=>	'Pass Phrase',
 		'kitchen:description'	=>	'Dies ist die URL, welche an den Kunden gesendet werden soll, damit sich dieser  in dir Kundenzone anmelden kann. So kann der Kunde alles sehen, welches Sie im als "inder Kundenzone zeigen" markiert haben.',
-	
+
 	/** END Kitchen Area **/
 
 );
