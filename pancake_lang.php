@@ -154,6 +154,8 @@ $lang = array(
 	'global:upload_files' => ' Dateien hochladen',
 	'global:add_more'	=> 'hinzufügen',
 	'global:select'	=>	'Bitte auswählen',
+	'global:timers' => 'Timers',
+	'global:more' => 'Mehr',
 
 
 	'global:optional_increment' => '<strong>Optional</strong> -erhöht sich automatisch',
@@ -244,6 +246,8 @@ $lang = array(
 	/** End Contact Log **/
 
 	/** Invoices **/
+
+	'invoice:paid_amount' => 'bezahlter Betrag',
 	'invoices:markassent' => 'Als Versendet markieren',
 	'invoices:invoicedate' => 'Rechnungsdatum',
 	'invoices:sentbutunpaid' => 'Rechnung, an den Kunden versendet aber immer noch nicht bezahlt',
