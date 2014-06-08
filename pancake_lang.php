@@ -145,7 +145,7 @@ $lang = array(
 	'global:viewpdf' => 'PDF ansehen',
 	'global:duplicate' => 'Duplizieren',
 	'global:urltosend'	=>	'Hier die zu versendende URL:',
-	'global:copytoclipboard'	=>	'In die Zwischenablage kopieren',
+	'global:copytoclipboard'	=>	'In Zwischenablage kopieren',
     'global:if_you_dont_know_how_to_set_it_up'		=> 'If you don\'t know how to set it up, <a href="http://help.pancakeapp.com/customer/portal/articles/605703">click here</a>.',
 	'global:quick_links'			=> 'Quick Links',
 	'global:view_all'				=> 'Alles ansehen',
@@ -156,6 +156,13 @@ $lang = array(
 	'global:select'	=>	'Bitte auswählen',
 	'global:timers' => 'Timers',
 	'global:more' => 'Mehr',
+	'global:timer_app' => 'Zeituhr',
+	'global:converttoestimate' => 'zu Kostenvoranschlag umwandeln',
+	'global:search' => 'Suche',
+	'global:timesheets' => 'Zeitblätter',
+	'global:all_settings' =>  'Alle Einstellungen',
+	'store:store' => 'Shop',
+	'global:there_is_no_activity'=> 'Keine Aktivitäten',
 
 
 	'global:optional_increment' => '<strong>Optional</strong> -erhöht sich automatisch',
@@ -164,6 +171,7 @@ $lang = array(
 	'login:readytodothis' => 'Bereit?',
 	'login:sup' => 'Sup?',
 	'global:actions' => 'Aktivitäten',
+	'login:username_email' => ' Login Name oder Email',
 
 
 	/** Greetings **/
@@ -179,9 +187,11 @@ $lang = array(
     'global:accept_proposal' => 'Vorschlag anhemen',
     'global:proposal_rejected' => 'Vorschlag abgelehnt',
     "global:proposal_accepted" => "Vorschlag angenommen",
+	'global:there_are_no_tasks_assigned_to_you' => 'Es sind keine Ihnen zugeordnete Tasks vorhanden',
 
     "global:client_area" => "Kunden Area",
     "global:admin" => "Admin",
+	'global:updates_available' => 'Aktualisierung möglich',
 	/** End Greetings **/
 
 	/** Dashboard **/
@@ -231,6 +241,8 @@ $lang = array(
 	'clients:clientaction'		=>	'&nbsp;',
 	'clients:passphrase'		=> 'Pass Phrase',
 	'clients:bad_passphrase'	=> 'Pass Phrase ist falsch.',
+	'clients:total_clients' => 'Total Kunden',
+	'clients:delete' => 'Kunde löschen',
 	/** End Clients **/
 
 
@@ -322,6 +334,7 @@ $lang = array(
 	'invoices:file_name'	=>	'Dateiname',
 	'invoices:date_created' => 'Erstellungsdatum',
 	'invoices:size' => 'Grösse',
+	'reminders:reminders' => 'Erinnerungen',
 	/** End Invoices **/
 
 	/** Estimates **/
@@ -373,6 +386,11 @@ $lang = array(
 		'projects:add_hours' => 'Stunden hinzufügen',
 	'projects:generate_invoice' => 'Rechnung erstellen',
 	'projects:no_projects' => 'Keine Projekte.',
+	'projects:hours_worked_short' => 'Gearbeitete Projektstunden',
+	'projects:totalprojects' => 'Total Projekte',
+	'projects:archived' => 'archiviert',
+	'projects:tracked' => 'getrackt',
+
 	/** End Projects **/
 
 
@@ -411,6 +429,7 @@ $lang = array(
 	'reports:view' => 'Bericht ansehen',
 	'reports:show_all' => 'Berichte anzeigen',
 	'reports:nodata' => 'No :1.',
+	'reports:total_amount' => 'Total',
 	/** End Reports **/
 
 	/** Currencies **/
@@ -492,6 +511,7 @@ $lang = array(
 	'tasks:no_task_message' => 'Sie sollten welche erstellen!',
 	'tasks:is_viewable' => 'In Kundenbereich anzeigen?',
 	'tasks:no_milestones' => 'Aufgabe ohne Meilensteine',
+	'tasks:timers_running' => 'Laufende Timers',
 
 	/** Users **/
 	'users:create_user' => 'Neuer Benutzer',
@@ -667,6 +687,47 @@ $lang = array(
 	'settings:currency_code' => 'Währungs-Code',
 	'settings:exchange_rate' => 'Wechselkurs',
 	'settings:add_currency' => 'Weitere Währung hinzufügen',
+	'settings:business_identities' => 'Geschäfts Identitäten',
+	'settings:task_statuses' => 'Task Status',
+	'settings:ticket_priorities' => 'Ticket Prioritäten',
+	'settings:ticket_statuses' => 'Ticket Status',
+	'settings:emails' => 'Emails',
+
+	'settings:pdf_attachments' => 'PDF Anhänge',
+	'settings:description' => 'Beschreibung',
+
+	'settings:business_name' => 'Geschäftsname',
+	'settings:no_tax' => 'Steuer frei',
+	'settings:business_id' => 'Geschäftsidentität',
+	'settings:business_identity_explanation' => 'Geschäftsidentität Beschreibung',
+	'clients:can_create_support_tickets' => 'Kann Support Tickets erstellen',
+	'tickets:disable_client' => 'nicht zugeordnet',
+	'Clients:delete' => 'Kunde löschen',
+
+	// Tickets
+	'tickets:add_a_new_ticket' => 'Neues Ticket erstellen',
+	'tickets:view_archived' => 'Archivierte anzeigen',
+	'tickets:all_tickets' => 'Alle Tickets',
+
+	// emails
+	'email_templates:new_invoice' => 'Email - Neue Rechnung',
+	'email_templates:new_estimate' => 'Email - Neue Schätzung',
+	'email_templates:new_proposal' => 'Email - Neue Offerte',
+	'email_templates:invoice_payment_notification_for_admin' => 'Email Rechnung-erhalten - Admin',
+	'email_templates:invoice_payment_notification_for_client' =>'Email - Zahlung erhalten - Kunde',
+	'email_templates:new_ticket' => 'Email - neues Ticket',
+	'email_templates:new_ticket_invoice' => 'Email - Rechnung für Ticket',
+	'email_templates:ticket_updated' => 'Email -Ticket aktualisiert',
+	'email_templates:ticket_status_updated' => 'Email - Ticket Status aktualisiert',
+	'email_templates:assigned_to_task' => 'Email - Zugeordnet zu Task',
+	'email_templates:assigned_to_milestone' => 'Email - zugeordnet zu Meilenstein',
+	'email_templates:new_comment' => 'Email - neuer Kommentar',
+	'settings:checkforupdates' => 'Update suchen',
+	'settings:when_new_updates_are_available' => 'Wenn Aktualisierungen vorhanden sind',
+	'settings:install_automatically'=> 'Automatisch installieren',
+	'settings:will_have_to_overwrite_multiple_files' => 'Folgende Dateien werden überschrieben',
+	'settings:loading_update_details' => 'Update - Details laden',
+	'settings:checking_for_updates' => 'Nach Aktualisierungen suchen.',
 	/** End Settings **/
 
 	'update:ifyourenotsurecontactus' => "Falls Sie nicht sicher sind, was zu machen ist, eröffnen Sie im <a href='http://pancakeapp.com/forums/newtopic/2/'>Forum ein neues Topic</a>.",
