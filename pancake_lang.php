@@ -199,6 +199,13 @@ $lang = array(
 	'dashboard:outstanding'		=>	'Ausstehend',
 	'dashboard:latest_activity'	=>	'Letzte Aktivitäten',
 	'dashboard:upcoming_tasks' 	=> 	'Anstehende Aufgaben',
+	'dashboard:today' => 'Heute',
+	'dashboard:your_projects' => 'Projekte',
+	'dashboard:team_activity' => 'Team Aktivitäten',
+	'dashboard:client_activity' => 'Kunden Aktivitäten',
+	'dashboard:view_all_client_activity' => 'Alle Kunden Aktiviäten ansehen',
+	'dashboard:snapshot' => 'Momentaufnahme',
+
 	/** End Dashboard **/
 
 
@@ -335,6 +342,7 @@ $lang = array(
 	'invoices:date_created' => 'Erstellungsdatum',
 	'invoices:size' => 'Grösse',
 	'reminders:reminders' => 'Erinnerungen',
+	'invoices:client_viewed' => 'Rechnung vom Kunden eingesehen',
 	/** End Invoices **/
 
 	/** Estimates **/
