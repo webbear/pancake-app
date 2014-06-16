@@ -163,6 +163,7 @@ $lang = array(
 	'global:all_settings' =>  'Alle Einstellungen',
 	'store:store' => 'Shop',
 	'global:there_is_no_activity'=> 'Keine Aktivitäten',
+	'global:tax' => 'Steuer',
 
 
 	'global:optional_increment' => '<strong>Optional</strong> -erhöht sich automatisch',
